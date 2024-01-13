@@ -1,0 +1,13 @@
+<div *ngFor="let user of users" class="user-card">
+  <div class="user-details">
+    <img [src]="user.picture.thumbnail" alt="Profile">
+    <p><strong>Name:</strong> {{ user.name.first }} {{ user.name.last }}</p>
+    <p><strong>Gender:</strong> {{ user.gender }}</p>
+    <p><strong>Location:</strong> {{ user.location.city }}, {{ user.location.country }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+  </div>
+  <div class="weather-details">
+    <!-- Додайте іконку та температурні дані згідно із специфікацією -->
+  </div>
+  <button (click)="saveUserDetails(user)">Save</button>
+</div>
